@@ -1,0 +1,27 @@
+{%extends 'distbase.html'%}
+{%block content%}
+<div style="height: 100%;" class="bg-dark">
+<div style="text-align: center; border:2px solid;width:50%; margin:auto" class=" bg-white"><i class="far fa-check-circle fa-10x mx-auto text-success mt-3"></i>
+    <div class="h1 mt-3 text-success">Product Found..!</div>
+    <!-- <div class="h4 mt-5"> Product ID &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp; :  {{val.pid}}</div> -->
+    <div class="h4 mt-5"> Product Name &ensp;&ensp;&ensp;&ensp;&ensp;:  {{val.pname}}</div>
+    <div class="h4 mt-3"> Manufactured Date &ensp;:  {{val.mdate}}</div>
+    <div class="h4 mt-3"> Expiry Date &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;:  {{val.edate}}</div>
+   
+   {% if val.ver%}
+   <div class="h4 mt-3"> verified &ensp;&ensp;&ensp;&ensp;&ensp;:&ensp;&ensp;&ensp;<i class="fa fa-times-circle-o  mx-auto text-danger mt-3"></i> </div>
+    {%else%}
+    <div class="h4 mt-3"> verified &ensp;&ensp;&ensp;&ensp;&ensp;:&ensp;&ensp;&ensp;<i class="far fa-check-circle  mx-auto text-success mt-3"></i> </div>
+    {%endif%}
+    <p style="color: white;" class="mt-5">.</p>
+    <p style="color: white;" >.</p>
+    <!-- <form action="/manuf/addp" method="POST">
+        {% csrf_token %}
+
+        <input type="button">
+        </form> -->
+</div>
+</div>
+
+  
+{%endblock%}
